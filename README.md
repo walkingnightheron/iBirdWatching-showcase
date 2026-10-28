@@ -63,6 +63,18 @@ flowchart LR
 
 ![端侧性能](assets/edge-benchmark.png)
 
+## Android 离线 Demo
+
+`releases/iBirdWatching-demo.apk` 是一个可安装的离线分类 demo：
+
+- Android 12 及以上
+- EfficientNet-B0 120 类分类
+- 两张内置示例图片
+- 本地 ONNX Runtime 推理，不联网
+- 只演示分类链路，不包含登录、地图和 RAG
+
+安装说明和校验值见 [releases/README.md](releases/README.md)。
+
 ## 登录、注册和地图网关怎么公开
 
 公开仓库不直接提交真实服务密钥。展示版采用“适配器 + demo 模式”：
