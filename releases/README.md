@@ -4,7 +4,7 @@
 
 ## 文件
 
-- 文件：`iBirdWatching-demo.apk`
+- 文件：`iBirdWatching-demo.apk`（[下载](https://github.com/walkingnightheron/iBirdWatching-showcase/releases/download/v1.0.0-demo/iBirdWatching-demo.apk)）
 - 包名：`com.example.ibirdwatchingdemo`
 - 版本：`1.0.0-demo`
 - 最低系统：Android 12（API 31）

@@ -65,7 +65,7 @@ flowchart LR
 
 ## Android 离线 Demo
 
-`releases/iBirdWatching-demo.apk` 是一个可安装的离线检测 + 分类 demo：
+GitHub [Releases](https://github.com/walkingnightheron/iBirdWatching-showcase/releases/tag/v1.0.0-demo) 提供可安装的离线检测 + 分类 demo（`iBirdWatching-demo.apk`）：
 
 - Android 12 及以上
 - 相机拍照和系统相册选图

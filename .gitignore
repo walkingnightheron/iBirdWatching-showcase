@@ -21,6 +21,9 @@ deploy_models/
 dataset*/
 data/
 
+# release binaries (published as GitHub Release assets)
+releases/*.apk
+
 # build output
 target/
 build/
