@@ -1,0 +1,41 @@
+# local configuration
+.env
+*.env
+application-local.properties
+application-*.local.properties
+
+# secrets and credentials
+*.pem
+*.p12
+*.jks
+*.keystore
+
+# model binaries and datasets
+Models/
+models/
+deploy_models/
+*.onnx
+*.onnx.data
+*.pt
+*.pth
+dataset*/
+data/
+
+# release binaries (published as GitHub Release assets)
+releases/*.apk
+
+# build output
+target/
+build/
+dist/
+node_modules/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
