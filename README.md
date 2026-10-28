@@ -57,11 +57,9 @@ flowchart LR
 
 测试视频共 1267 帧：
 
-| 平台 | 检测均值 | 分类均值 | 端到端 | 帧率 |
+| 环境 | 检测均值 | 分类均值 | 端到端 | 帧率 |
 | --- | ---: | ---: | ---: | ---: |
-| 天玑 8100 / CPU | 166.6 ms | 43.6 ms | 211 ms | 4.7 FPS |
-| 骁龙 8 Elite / CPU | 67.4 ms | 34.6 ms | 102 ms | 9.8 FPS |
-| 骁龙 8 Elite / QNN NPU | 65.8 ms | 19.1 ms | 85 ms | 11.7 FPS |
+| QNN NPU | 65.8 ms | 19.1 ms | 85 ms | 11.7 FPS |
 
 ![端侧性能](assets/edge-benchmark.png)
 
