@@ -6,7 +6,7 @@
 
 - 文件：`iBirdWatching-demo.apk`
 - 包名：`com.ibirdwatch.demo`
-- 版本：`0.1.0-demo`
+- 版本：`0.1.1-demo`
 - 最低系统：Android 12（API 31）
 - 签名：demo keystore，仅用于展示
 
@@ -17,6 +17,18 @@
 - 本地 ONNX Runtime 推理
 - 展示 Top-5 中文名称、学名和置信度
 - 不联网，不依赖私有后端
+
+## 模型版本
+
+- 文件：`bird_efficientnet_b0.onnx`
+- 格式：FP32 ONNX（外部权重 `bird_efficientnet_b0.onnx.data`）
+- 类别：120 类
+- 输入：224 × 224 RGB，0-255 原始像素（归一化已烘焙进模型）
+- 用途：本 demo 只跑分类，不包含 YOLO 检测
+- ONNX SHA256：`b684f5342f3580d21a3f5dfa2bcc38ca2a728dcb0382e229cf7a242a84436000`
+- 外部权重 SHA256：`c2f72e1bcf4c4b619701549657c07df82d79f1351f1860a60586667a901f8249`
+
+这份模型与主 App、服务端、`deploy_models` 中的同名模型字节一致；FP16/INT8 版本不在这份 demo 中使用。
 
 ## 不包含
 

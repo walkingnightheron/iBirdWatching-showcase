@@ -69,6 +69,7 @@ flowchart LR
 
 - Android 12 及以上
 - EfficientNet-B0 120 类分类
+- 使用 FP32 ONNX 分类模型，不包含 YOLO 检测
 - 两张内置示例图片
 - 本地 ONNX Runtime 推理，不联网
 - 只演示分类链路，不包含登录、地图和 RAG
