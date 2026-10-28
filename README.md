@@ -65,14 +65,13 @@ flowchart LR
 
 ## Android 离线 Demo
 
-`releases/iBirdWatching-demo.apk` 是一个可安装的离线分类 demo：
+`releases/iBirdWatching-demo.apk` 是一个可安装的离线检测 + 分类 demo：
 
 - Android 12 及以上
-- EfficientNet-B0 120 类分类
-- 使用 FP32 ONNX 分类模型，不包含 YOLO 检测
-- 两张内置示例图片
-- 本地 ONNX Runtime 推理，不联网
-- 只演示分类链路，不包含登录、地图和 RAG
+- 相机拍照和系统相册选图
+- YOLO 检测 + EfficientNet-B0 120 类分类
+- 使用 FP32 ONNX 模型，完全离线运行
+- 不包含登录、地图和 RAG
 
 安装说明和校验值见 [releases/README.md](releases/README.md)。
 

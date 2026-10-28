@@ -1,22 +1,23 @@
 # iBirdWatching Android Demo
 
-这是一个离线、可安装的分类演示 APK，用于展示移动端 ONNX Runtime 推理链路。
+这是一个离线、可安装的端侧识别演示 APK，用于展示移动端检测与分类推理链路。
 
 ## 文件
 
 - 文件：`iBirdWatching-demo.apk`
-- 包名：`com.ibirdwatch.demo`
-- 版本：`0.1.1-demo`
+- 包名：`com.example.ibirdwatchingdemo`
+- 版本：`1.0.0-demo`
 - 最低系统：Android 12（API 31）
-- 签名：demo keystore，仅用于展示
+- 大小：约 149 MB
+- 签名：debug 签名，仅用于展示，不适合上架
 
 ## 功能
 
-- 内置 EfficientNet-B0 120 类鸟类分类模型
-- 内置两张示例鸟图
-- 本地 ONNX Runtime 推理
+- 相机拍照
+- 系统相册选图
+- YOLO 检测 + EfficientNet-B0 120 类分类
+- 本地 ONNX Runtime 推理，不连接后端
 - 展示 Top-5 中文名称、学名和置信度
-- 不联网，不依赖私有后端
 
 ## 模型版本
 
@@ -24,11 +25,12 @@
 - 格式：FP32 ONNX（外部权重 `bird_efficientnet_b0.onnx.data`）
 - 类别：120 类
 - 输入：224 × 224 RGB，0-255 原始像素（归一化已烘焙进模型）
-- 用途：本 demo 只跑分类，不包含 YOLO 检测
+- 检测模型：`detect_6_640.onnx`（单类 bird）
 - ONNX SHA256：`b684f5342f3580d21a3f5dfa2bcc38ca2a728dcb0382e229cf7a242a84436000`
 - 外部权重 SHA256：`c2f72e1bcf4c4b619701549657c07df82d79f1351f1860a60586667a901f8249`
+- 检测模型 SHA256：`16e0daf092e2e422a25f3593bcf2dd118e3ffbf0d11893edc4194aa2a24051d0`
 
-这份模型与主 App、服务端、`deploy_models` 中的同名模型字节一致；FP16/INT8 版本不在这份 demo 中使用。
+分类模型与主 App、服务端、`deploy_models` 中的同名模型字节一致；这份 demo 使用 FP32 分类模型和检测模型，不包含 FP16/INT8 变体。
 
 ## 不包含
 
@@ -45,7 +47,7 @@
 adb install -r iBirdWatching-demo.apk
 ```
 
-也可以把 APK 传到 Android 手机上直接安装。首次运行需要把模型从 assets 复制到应用私有目录。
+也可以把 APK 传到 Android 手机上直接安装。它和之前的 `com.ibirdwatch.demo` 是不同包名，可以同时安装。
 
 ## 校验
 
